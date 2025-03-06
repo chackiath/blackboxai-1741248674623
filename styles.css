@@ -1,0 +1,151 @@
+/* Custom styles */
+/* Dark mode toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e2e8f0;
+    transition: .3s ease-in-out;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .3s ease-in-out;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+input:checked + .slider {
+    background-color: #e91e63;
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+.dark .slider {
+    background-color: #4b5563;
+}
+
+.dark .slider:before {
+    background-color: #e91e63;
+}
+
+/* News Slider */
+.news-slider {
+    position: relative;
+    padding: 0 20px;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+    transition: all 0.2s;
+    border: 1px solid #e5e7eb;
+    color: #4b5563;
+}
+
+.slider-nav:hover {
+    background-color: #f3f4f6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.dark .slider-nav {
+    background: #374151;
+    border-color: #4b5563;
+    color: #e5e7eb;
+}
+
+.dark .slider-nav:hover {
+    background: #4b5563;
+}
+
+.slider-nav.prev {
+    left: 0;
+}
+
+.slider-nav.next {
+    right: 0;
+}
+
+/* Hide scrollbar but keep functionality */
+.news-slider .flex::-webkit-scrollbar {
+    display: none;
+}
+
+.news-slider .flex {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Dark mode styles */
+.dark .slider {
+    background-color: #4b5563;
+}
+
+.dark .slider-nav {
+    background: rgba(55, 65, 81, 0.9);
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+    aside.w-80 {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    aside.w-64 {
+        width: 56px;
+    }
+    aside.w-64 span {
+        display: none;
+    }
+    main.ml-64 {
+        margin-left: 56px;
+    }
+}
+
+@media (max-width: 640px) {
+    aside.w-64 {
+        display: none;
+    }
+    main.ml-64 {
+        margin-left: 0;
+    }
+}
