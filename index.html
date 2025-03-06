@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-sm fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="https://placehold.co/100x40/e91e63/ffffff.png?text=EM" alt="Logo" class="h-10">
+            </div>
+            
+            <div class="flex-1 mx-12">
+                <div class="relative max-w-2xl mx-auto">
+                    <input type="text" 
+                           placeholder="Search news..." 
+                           class="w-full px-5 py-2.5 rounded-full bg-gray-100 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-600 dark:text-gray-200 text-sm">
+                    <button class="absolute right-3 top-2.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-5">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <button class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition-colors text-sm font-medium">
+                    Sign in
+                </button>
+                <button class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 transition-colors relative">
+                    <i class="fas fa-bell text-xl"></i>
+                    <span class="absolute -top-1 -right-1 w-2 h-2 bg-pink-500 rounded-full"></span>
+                </button>
+                <button class="w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                    <i class="fas fa-user text-gray-600 dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex mt-16">
+        <!-- Sidebar -->
+        <aside class="w-64 fixed h-screen bg-white dark:bg-gray-800 shadow-sm pt-4">
+            <nav class="space-y-0.5">
+                <a href="#" class="flex items-center px-4 py-3 text-pink-600 bg-pink-50 dark:bg-gray-700 dark:text-pink-400">
+                    <i class="fas fa-home w-5 text-center"></i>
+                    <span class="ml-3 font-medium">Home</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-newspaper w-5 text-center"></i>
+                    <span class="ml-3">Top News</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-globe w-5 text-center"></i>
+                    <span class="ml-3">World</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-flag-usa w-5 text-center"></i>
+                    <span class="ml-3">America</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-map-marker-alt w-5 text-center"></i>
+                    <span class="ml-3">India</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-mountain w-5 text-center"></i>
+                    <span class="ml-3">Oceania</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-landmark w-5 text-center"></i>
+                    <span class="ml-3">Europe</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-mosque w-5 text-center"></i>
+                    <span class="ml-3">Gulf</span>
+                </a>
+                <div class="border-t border-gray-200 dark:border-gray-700 my-2"></div>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-star w-5 text-center"></i>
+                    <span class="ml-3">Special</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-book w-5 text-center"></i>
+                    <span class="ml-3">Sahityam</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="ml-64 flex-1 p-6">
+            <!-- News Slider -->
+            <div class="news-slider mb-8">
+                <div class="flex gap-4 overflow-x-auto pb-4">
+                    <!-- News Cards will be populated by JavaScript -->
+                    <div class="flex-shrink-0 w-72 relative group">
+                        <div class="relative h-48 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700">
+                            <span class="absolute top-3 left-3 bg-white/90 dark:bg-gray-800/90 px-2 py-1 rounded text-sm">World</span>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                                <h3 class="text-white font-medium">നരേന്ദ്ര മോദിയുടെ വിജയത്തിൽ സന്തോഷമെന്ന് ട്രംപ്</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More cards will be added by JavaScript -->
+                </div>
+                <button class="slider-nav prev">❮</button>
+                <button class="slider-nav next">❯</button>
+            </div>
+
+            <!-- News Articles -->
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Article 1 -->
+                <article class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 hover:shadow-md transition-shadow">
+                    <div class="flex gap-6">
+                        <div class="w-48 h-32 bg-gray-200 dark:bg-gray-700 rounded-lg flex-shrink-0 overflow-hidden">
+                            <img src="https://source.unsplash.com/random/200x150/?news" alt="News" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-2.5">
+                                <span class="text-pink-600 text-sm font-medium">America</span>
+                                <span class="text-gray-400 text-sm">• 3h ago</span>
+                            </div>
+                            <h2 class="text-xl font-semibold mb-4 dark:text-white line-clamp-2">കാപിറ്റോളിൽ നടന്ന നാഷനൽ പ്രെയർ ബ്രേക്‌ഫാസ്റ്റിൽ റെപ്പ. രാജ കൃഷ്ണമൂർത്തി ഗായത്രി മന്ത്രം ആലപിച്ചു</h2>
+                            <div class="flex items-center gap-6 text-gray-500">
+                                <button class="flex items-center gap-1">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>25</span>
+                                </button>
+                                <button class="flex items-center gap-1">
+                                    <i class="far fa-thumbs-down"></i>
+                                    <span>1</span>
+                                </button>
+                                <button class="flex items-center gap-1">
+                                    <i class="far fa-comment"></i>
+                                    <span>2</span>
+                                </button>
+                                <button class="flex items-center gap-1">
+                                    <i class="fas fa-share"></i>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="w-80 fixed right-0 h-screen bg-white dark:bg-gray-800 shadow-sm p-4 overflow-y-auto">
+            <div class="mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-semibold dark:text-white">Recommended</h3>
+                    <a href="#" class="text-pink-600 text-sm">view all</a>
+                </div>
+                <!-- Recommended News Items -->
+                <div class="space-y-4">
+                    <!-- Add recommended news items here -->
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
